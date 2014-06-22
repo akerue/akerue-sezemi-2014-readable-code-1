@@ -50,7 +50,7 @@ if __name__ == "__main__":
         if recipe_id in recipes_dic:
             print "%d: %s" % (recipe_id, recipes_dic[recipe_id])
         else:
-            print "IDが不正"
+            print "IDが不正です。"
     else:
         print_dic(recipes_dic)
 
