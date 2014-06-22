@@ -36,7 +36,9 @@ input the id, you want to show (first == 0) > 1
 
 URL: https://github.com/kajiwara0126/kajiwara0126-sezemi-2014-readable-code-1
 
-きっかけ: プログラムの進捗を確認しようとした時にどこまでの機能が実装されているかを確認することができた．
+きっかけ: プログラムの進捗を確認しようとした時に
+
+どこまでの機能が実装されているかを確認することができた．
 
 ---
 
@@ -45,6 +47,7 @@ URL: https://github.com/kajiwara0126/kajiwara0126-sezemi-2014-readable-code-1
 ---
 
 関数がどういう挙動を行うかを短く表記
+
 例: リストの型を入力すると辞書の型が出力される
 
 ```
@@ -55,5 +58,7 @@ def list2dict(val_list):
 URL: https://github.com/akerue/YOwatari-sezemi-2014-readable-code-1/blob/master/src/main.py#L12
 
 きっかけ: Linuxの命名慣習に基づいたものになっているので，
+
 プログラマフレンドリな名前になっており，
+
 コードを読んだ際にすんなりと理解できた．
