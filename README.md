@@ -14,5 +14,6 @@ Python (2.7.5)
 
 > python recipe.py
 
- Python 2.Xのプログラムです．"python -V"と実行してversionが3.Xの場合は実行できないことがあります 
+Python 2.Xのプログラムです．"python -V"と実行してversionが3.Xの場合は実行できないことがあります ．
 
+レシピはdataディレクトリ内にある"recipe-data.txt"から入力される.
