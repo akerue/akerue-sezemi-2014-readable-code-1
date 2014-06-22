@@ -6,7 +6,7 @@ with codecs.open("./data/recipe-data.txt", "r", encoding="utf-8") as f:
     # 改行区切りのレシピを取得
     recipes = f.readlines()
 
-# 今後レシピの数が増える可能性があるため，イテレートしている
+# 改行で区切られたレシピを順番に表示
 for recipe in recipes:
     # 空行が表示されるのを防ぐ
     print recipe.rstrip()
