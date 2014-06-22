@@ -2,6 +2,8 @@
 
 import codecs
 import sys
+import os
+import re
 
 
 # python recipe.py [raw_data] [recipe_id]
@@ -31,7 +33,27 @@ def print_dic(dic):
 
 if __name__ == "__main__":
     if argc >= 2:
-        filename = argv[1]
+        dirpath = argv[1]
+
+        # ディレクトリ内のファイルのリストを作成
+        files = []
+        for file in os.listdir(dirpath):
+            filepath = os.path.join(dirpath, file)
+            if os.path.isfile(filepath):
+                files.append(file)
+
+        # ユーザリストを作成
+        users = []
+        pattrn_filename = re.compile(r'^\.*')  # 拡張子除去
+        # ユーザ名のルール
+        # 小文字のアルファベット、数字、ハイフン、アンダーバー
+        # 10文字以内
+        pattrn_username = re.compile(r'^[a-z0-9_-]{0,10}')
+        for file in files:
+            filename = pattrn_filename(file)[0]
+            if pattrn_username.search(filename) and len(filename) <= 10:
+                users.append(filename)
+
         # 日本語対応のため，codecs使用
         with codecs.open(filename, "r", encoding="utf-8") as f:
             # ファイルから改行区切りのレシピを取得
