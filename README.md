@@ -11,10 +11,28 @@ Python (2.7.5)
 # recipe.py
 
 以下のように実行することでプログラムを実行できます
+> python recipe.py [ディレクトリ] [ユーザ名] [レシピID]
 
-> python recipe.py
+レシピ全てを表示する例
+> python recipe.py recipe-data/ kou
+
+レシピIDを指定する例
+> python recipe.py recipe-data/ kou 1
 
 Python 2.Xのプログラムです．"python -V"と実行してversionが3.Xの場合は実行できないことがあります ．
 
-レシピはdataディレクトリ内にある"recipe-data.txt"から入力される.
+# レシピデータ
+
+**レシピファイルのファイル名をユーザ名として扱う**
+
+|ファイル名|ユーザ名|
+|:---------|:-------|
+|kou.txt|kou|
+
 レシピには改行区切りで複数のレシピを登録することが可能
+また、スペース区切りでcookpadのURLを指定できます。
+
+レシピデータ例:
+```
+オムライス http://cookpad.com/recipe/2653946
+```
